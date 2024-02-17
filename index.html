@@ -9,6 +9,86 @@
     <link href="./src/output.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="font-extrabold text-6xl">Tailwind</h1>
+    <main class="bg-slate-900 bg-[url('../images/background.png')] min-h-screen bg-no-repeat bg-center">
+        
+        <!-- home section -->
+        <section id="home" class="min-h-screen flex justify-center items-center">
+            <div class="text-center">
+                <h1 class="text-9xl text-white font-bold mb-5">Alphabet Clash</h1>
+                <p class="text-white text-2xl mb-5">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button class="btn" id="play-now">Play Now</button>
+            </div>
+        </section>
+
+        <!-- playground section -->
+        <section id="playground" class="hidden">
+            <br><br>
+            <div class="artboard artboard-horizontal phone-6 border-[16px] border-slate-800 rounded-xl mx-auto bg-slate-50/50">
+                <div class="flex justify-center">
+                    <p class="text-white text-center bg-slate-800 w-1/3 py-1 rounded-b-md">Don't watch keyboard while playing...</p>
+                </div>
+                <p id="current-letter" class="text-center mt-16 text-8xl font-bold"></p>
+            </div>
+            <br>
+            <div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
+                  </div> 
+                  <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                  </div> 
+                  <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
+                  </div>
+            </div>
+            <div class="flex justify-between">
+                <button class="btn ml-20 bg-purple-500">
+                    <span>Life</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    <span id="life">5</span>
+                </button>
+                <p class="text-white text-lg mt-5">Press "esc" to exit</p>
+                <button class="btn mr-20 bg-blue-500">
+                    <span>Score</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    <span id="score">0</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- score board section -->
+        <section id="score-board" class="min-h-screen flex items-center justify-center hidden">
+            <div class="p-10 rounded-lg text-center text-white bg-gradient-to-r from-violet-500 to-fuchsia-500">
+                <p class="text-6xl font-bold mb-5">Score: <span id="final-score"></span></p>
+                <button id="play-again" class="btn">Play Again</button>
+                <p class="text-white text-lg mt-5">Press "enter" to play again & "esc" to exit</p>
+            </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
 </body>
 </html>
